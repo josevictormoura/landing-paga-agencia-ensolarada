@@ -26,7 +26,7 @@
 }
 
 .header-bg{
-  width: 100vw;
+  width: 100%;
   background: url(./images/desktop/image-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -78,7 +78,11 @@ main{
   align-items: center;
   justify-content: center;
   margin-top: 70px;
-  gap: 150px;
+  gap: 110px;
+}
+
+.icon-arrow{
+  width: 40px;
 }
 
 .main-title{
@@ -87,4 +91,98 @@ main{
   color: var(--White);
   font-weight: 900;
   letter-spacing: 10px;
+}
+
+/* galery-images */
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+img{
+  width: 100%;
+  display: block;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  gap: 20px;
+}
+
+.content h2{
+  font-family: var(--font-frances);
+  font-size: 2rem;
+}
+
+.content p{
+  max-width: 50ch;
+  color: var(--Dark-grayish-blue);
+  line-height: 24px;
+  font-weight: 600px;
+}
+
+.content span{
+  max-width: max-content;
+  font-weight: 700;
+  box-shadow: -2px 8px 10px -5px var(--Yellow);
+  font-size: 15px;
+}
+
+.container .sof-red span{
+  box-shadow: -2px 8px 10px -5px var(--Soft-red);
+}
+
+/* section imagens text */
+
+.container-fruts{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content-fruts{
+  background: url(./images/desktop/image-graphic-design.jpg) no-repeat center center;
+  background-size: cover;
+  height: 592px;
+}
+
+.container-fruts .orange{
+  background: url(./images/desktop/image-photography.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.container-fruts div{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  /* width: 100%; */
+  padding-bottom: 40px;
+  color: var(--Dark-desaturated-cyan);
+}
+
+.container-fruts div h4{
+  font-family: var(--font-frances);
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.container-fruts div p{
+  text-align: center;
+  max-width: 50ch;
+  line-height: 20px;
+  font-weight: 600;
+  font-family: var(--font-barlow);
+  color: var(--Dark-moderate-cyan);
+}
+
+.container-fruts .orange h4,
+.container-fruts .orange p{
+  color: var(--Dark-blue-);
 }
