@@ -41,7 +41,15 @@
   margin: 0 auto;
 }
 
+[data-menu="button"]{
+  border: none;
+  background-color: #3EBFFF;
+  cursor: pointer;
+  display: none;
+}
+
 nav{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -205,7 +213,8 @@ img{
 }
 
 .container-clients{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -269,12 +278,12 @@ img{
   flex-direction: column;
   align-items: center;
   padding: 80px 0;
-  gap: 30px;
+  gap: 40px;
 }
 
 .footer-list-links{
   display: flex;
-  gap: 10px;
+  gap: 40px;
 }
 
 .footer-list-links li a{
@@ -286,4 +295,108 @@ img{
 .footer-network{
   display: flex;
   gap: 20px;
+}
+
+@media (max-width: 800px) {
+
+  .header-bg{
+    background: url(./images/mobile/image-header.jpg);
+    background-position: center bottom;
+    background-size: initial;
+    background-repeat: no-repeat;
+  }
+
+  .list-links{
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: -2px;
+    background-color: var(--White);
+    flex-direction: column;
+    width: 80vw;
+    align-items: center;
+    height: 54vh;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .list-links.active{
+    display: flex;
+  }
+
+  .list-links::before{
+    content: '';
+    position: absolute;
+    border-right: -2px solid transparent;
+    border-left: 50px solid transparent;
+    border-bottom:50px solid var(--White);
+    display: block;
+    width: 0px;
+    height: 0px;
+    top: -35px;
+    right: 0px;
+  }
+
+  .list-links li a{
+    color: var(--Grayish-blue);
+    font-weight: 700;
+  }
+
+  .list-links .link-contact{
+    background: #FED501;
+  }
+
+  [data-menu="button"]{
+    display: block;
+  }
+
+  main{
+    gap: 80px;
+  }
+
+  .main-title{
+    font-size: 2.5rem;
+  }
+
+  .container{
+    grid-template-columns: 1fr;
+  }
+
+  .content{
+    align-items: center;
+  }
+
+  .content h2{
+    text-align: center;
+  }
+
+  .yellow{
+    order: 1;
+  }
+
+  .sof-red{
+    order: 2;
+  }
+
+  .container-fruts{
+    grid-template-columns: 1fr;
+  }
+
+  .section-clients{
+    margin: 50px 0;
+  }
+
+  .container-clients{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .container-clients .client-info{
+    max-width: 40ch;
+  }
+
+  .container-images-footer{
+    grid-template-columns: 1fr 1fr;
+  }
+
 }
