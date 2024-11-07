@@ -186,3 +186,62 @@ img{
 .container-fruts .orange p{
   color: var(--Dark-blue-);
 }
+
+/* section clients */
+
+.section-clients{
+  margin: 100px auto;
+  max-width: 900px;
+}
+
+.section-clients h4{
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--Grayish-blue);
+  letter-spacing: 5px;
+  font-family: var(--font-frances);
+}
+
+.container-clients{
+  display: flex;
+  gap: 20px;
+}
+
+.client{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.client .client-info{
+  text-align: center;
+  line-height: 25px;
+  font-family: var(--font-barlow);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--Very-dark-grayish-blue);
+}
+
+.client img{
+  width: 50px;
+  border-radius: 50%;
+}
+
+.client-descrition{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.client-descrition h5{
+  font-weight: 900;
+  font-family: var(--font-frances);
+}
+
+.client-descrition p{
+  font-family: var(--font-barlow);
+  font-size: 12px;
+  color: var(--Grayish-blue);
+}
