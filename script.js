@@ -1,6 +1,8 @@
 const btn = document.querySelector('[data-menu="button"]');
 const menuLinks = document.querySelector('.list-links');
 const headerBg = document.querySelector('.header-bg');
+const sectionImages = document.querySelector('.grid-images-galery')
+const iconArrow = document.querySelector('.icon-arrow')
 
 function showMenuMobile() {
   menuLinks.classList.toggle('active');
@@ -34,4 +36,12 @@ function clickOutside(element, callback) {
   }
 }
 
+function addScrollTo() {
+  sectionImages.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  })
+}
+
 btn.addEventListener('click', showMenuMobile);
+iconArrow.addEventListener('click', addScrollTo)

@@ -92,6 +92,7 @@ main{
 
 .icon-arrow{
   width: 40px;
+  cursor: pointer;
 }
 
 .main-title{
